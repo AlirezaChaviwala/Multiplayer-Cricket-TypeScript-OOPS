@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .myTable {
+            border: solid 2px black;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        @media screen and (max-width: 576px) {
+            .myTable {
+                font-size: 9px;
+            }
+        }
+        
+        @media screen and (width: 320px) and (height:568px) {
+            .myTable {
+                font-size: 6.5px;
+            }
+        }
+        
+        @media screen and (width: 768px) and (height:1024px) {
+            .myTable {
+                font-size: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='container-fluid'>
+        <h1 class="text-center">CRICKET 10</h1>
+        <div class='row border-top border-bottom border-info p-2'>
+            <div class='col-lg-4 col-md-4 col-sm-12 order-sm-1 text-center'>
+                <h5>TEAM 1 SCORE</h5>
+                <h5 id='score-1'>0</h5>
+                <button id='hit-1' type="button" class='btn btn-primary'>HIT 1</button>
+            </div>
+            <div class='col-lg-4 col-md-4 col-sm-12 order-sm-2 text-center'>
+                <h5>TIMER</h5>
+                <h3 id='timer'>60</h3>
+            </div>
+            <div class='col-lg-4 col-md-4 col-sm-12 order-sm-3 text-center'>
+                <h5>TEAM 2 SCORE</h5>
+                <h5 id='score-2'>0</h5>
+                <button id='hit-2' type="button" class='btn btn-primary' disabled>HIT 2</button>
+            </div>
+        </div>
+
+        <div class='row mt-3'>
+            <div class='col-lg-5 col-md-5 col-sm-12 order-lg-1 order-sm-1 d-flex flex-column justify-content-center align-content-center text-center'>
+                <h5>TEAM 1 SCORE BOARD</h5>
+                <table class='myTable table table-bordered'>
+                    <thead>
+                        <tr>
+                            <th scope="col">TEAM 1</th>
+                            <th scope="col">B1</th>
+                            <th scope="col">B2</th>
+                            <th scope="col">B3</th>
+                            <th scope="col">B4</th>
+                            <th scope="col">B5</th>
+                            <th scope="col">B6</th>
+                            <th scope="col">TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">PLAYER 1</th>
+                            <td id='111'></td>
+                            <td id='112'></td>
+                            <td id='113'></td>
+                            <td id='114'></td>
+                            <td id='115'></td>
+                            <td id='116'></td>
+                            <td id='117'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 2</th>
+                            <td id='121'></td>
+                            <td id='122'></td>
+                            <td id='123'></td>
+                            <td id='124'></td>
+                            <td id='125'></td>
+                            <td id='126'></td>
+                            <td id='127'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 3</th>
+                            <td id='131'></td>
+                            <td id='132'></td>
+                            <td id='133'></td>
+                            <td id='134'></td>
+                            <td id='135'></td>
+                            <td id='136'></td>
+                            <td id='137'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 4</th>
+                            <td id='141'></td>
+                            <td id='142'></td>
+                            <td id='143'></td>
+                            <td id='144'></td>
+                            <td id='145'></td>
+                            <td id='146'></td>
+                            <td id='147'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 5</th>
+                            <td id='151'></td>
+                            <td id='152'></td>
+                            <td id='153'></td>
+                            <td id='154'></td>
+                            <td id='155'></td>
+                            <td id='156'></td>
+                            <td id='157'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 6</th>
+                            <td id='161'></td>
+                            <td id='162'></td>
+                            <td id='163'></td>
+                            <td id='164'></td>
+                            <td id='165'></td>
+                            <td id='166'></td>
+                            <td id='167'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 7</th>
+                            <td id='171'></td>
+                            <td id='172'></td>
+                            <td id='173'></td>
+                            <td id='174'></td>
+                            <td id='175'></td>
+                            <td id='176'></td>
+                            <td id='177'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 8</th>
+                            <td id='181'></td>
+                            <td id='182'></td>
+                            <td id='183'></td>
+                            <td id='184'></td>
+                            <td id='185'></td>
+                            <td id='186'></td>
+                            <td id='187'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 9</th>
+                            <td id='191'></td>
+                            <td id='192'></td>
+                            <td id='193'></td>
+                            <td id='194'></td>
+                            <td id='195'></td>
+                            <td id='196'></td>
+                            <td id='197'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 10</th>
+                            <td id='1101'></td>
+                            <td id='1102'></td>
+                            <td id='1103'></td>
+                            <td id='1104'></td>
+                            <td id='1105'></td>
+                            <td id='1106'></td>
+                            <td id='1107'></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class='col-lg-2 col-md-2 col-sm-12 order-lg-2 order-sm-3 text-center'>
+                <button id='gen-result' type="button" class='btn btn-primary mb-5' disabled>GENERATE RESULT</button>
+                <h5 class="border-bottom">MATCH WON BY</h5>
+                <h5 id='match-won'></h5>
+                <h5 class="border-bottom">MAN OF THE MATCH</h5>
+                <h5 id='match-man'></h5>
+                <h5 id='man-team'></h5>
+                <h5 id='man-score'></h5>
+            </div>
+            <div class='col-lg-5 col-md-5 col-sm-12 order-sm-2 order-lg-3 d-flex flex-column justify-content-center align-content-center text-center'>
+                <h5>TEAM 2 SCORE BOARD</h5>
+                <table class='myTable table table-bordered'>
+                    <thead>
+                        <tr>
+                            <th scope="col">TEAM 2</th>
+                            <th scope="col">B1</th>
+                            <th scope="col">B2</th>
+                            <th scope="col">B3</th>
+                            <th scope="col">B4</th>
+                            <th scope="col">B5</th>
+                            <th scope="col">B6</th>
+                            <th scope="col">TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">PLAYER 1</th>
+                            <td id='211'></td>
+                            <td id='212'></td>
+                            <td id='213'></td>
+                            <td id='214'></td>
+                            <td id='215'></td>
+                            <td id='216'></td>
+                            <td id='217'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 2</th>
+                            <td id='221'></td>
+                            <td id='222'></td>
+                            <td id='223'></td>
+                            <td id='224'></td>
+                            <td id='225'></td>
+                            <td id='226'></td>
+                            <td id='227'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 3</th>
+                            <td id='231'></td>
+                            <td id='232'></td>
+                            <td id='233'></td>
+                            <td id='234'></td>
+                            <td id='235'></td>
+                            <td id='236'></td>
+                            <td id='237'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 4</th>
+                            <td id='241'></td>
+                            <td id='242'></td>
+                            <td id='243'></td>
+                            <td id='244'></td>
+                            <td id='245'></td>
+                            <td id='246'></td>
+                            <td id='247'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 5</th>
+                            <td id='251'></td>
+                            <td id='252'></td>
+                            <td id='253'></td>
+                            <td id='254'></td>
+                            <td id='255'></td>
+                            <td id='256'></td>
+                            <td id='257'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 6</th>
+                            <td id='261'></td>
+                            <td id='262'></td>
+                            <td id='263'></td>
+                            <td id='264'></td>
+                            <td id='265'></td>
+                            <td id='266'></td>
+                            <td id='267'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 7</th>
+                            <td id='271'></td>
+                            <td id='272'></td>
+                            <td id='273'></td>
+                            <td id='274'></td>
+                            <td id='275'></td>
+                            <td id='276'></td>
+                            <td id='277'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 8</th>
+                            <td id='281'></td>
+                            <td id='282'></td>
+                            <td id='283'></td>
+                            <td id='284'></td>
+                            <td id='285'></td>
+                            <td id='286'></td>
+                            <td id='287'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 9</th>
+                            <td id='291'></td>
+                            <td id='292'></td>
+                            <td id='293'></td>
+                            <td id='294'></td>
+                            <td id='295'></td>
+                            <td id='296'></td>
+                            <td id='297'></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLAYER 10</th>
+                            <td id='2101'></td>
+                            <td id='2102'></td>
+                            <td id='2103'></td>
+                            <td id='2104'></td>
+                            <td id='2105'></td>
+                            <td id='2106'></td>
+                            <td id='2107'></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+
+</html>
